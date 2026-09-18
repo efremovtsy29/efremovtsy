@@ -1,3 +1,4 @@
+/* ==================== БАЗА ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ШАПКА */
+/* ==================== ШАПКА ==================== */
 .header {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -84,6 +85,7 @@ body {
   background: #1a1a1a;
   border: 1px solid var(--border);
   display: block;
+  object-fit: cover;
 }
 
 .qr-caption {
@@ -102,18 +104,12 @@ body {
 .group-photo {
   width: 100%;
   aspect-ratio: 16/10;
-  background: #1a1a1a;
+  object-fit: cover;
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #444;
-  font-size: 0.8rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  display: block;
 }
 
-/* МАСТЕР */
+/* ==================== МАСТЕР ==================== */
 .master {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -145,21 +141,16 @@ body {
 
 .master-photo {
   aspect-ratio: 3/4;
-  background: #1a1a1a;
+  width: 100%;
+  object-fit: cover;
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #444;
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  display: block;
 }
 
 .master-text-left { text-align: right; }
 .master-text-right { text-align: left; }
 
-/* ГАЛЕРЕЯ */
+/* ==================== ГАЛЕРЕЯ ==================== */
 .students {
   padding: 60px 40px;
 }
@@ -175,7 +166,7 @@ body {
 
 .students-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -186,19 +177,16 @@ body {
 
 .student-photo {
   aspect-ratio: 3/4;
-  background: #1a1a1a;
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
-  font-size: 2.5rem;
-  font-weight: 800;
   transition: 0.3s;
+  width: 100%;
+  cursor: pointer;
 }
 
 .student-card:hover .student-photo {
-  background: #222;
   border-color: var(--accent);
 }
 
@@ -218,7 +206,7 @@ body {
   border-bottom-color: var(--accent-2);
 }
 
-/* ПОДВАЛ */
+/* ==================== ПОДВАЛ ==================== */
 .footer {
   padding: 40px;
   border-top: 1px solid var(--border);
@@ -229,7 +217,46 @@ body {
   color: var(--accent);
 }
 
-/* МОБИЛЬНЫЙ */
+/* ==================== МОДАЛЬНОЕ ОКНО ==================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-overlay img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 2px solid #FFB800;
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #FFB800;
+  font-size: 3rem;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  color: #FF8C00;
+  transform: scale(1.2);
+}
+
+/* ==================== МОБИЛЬНЫЙ ==================== */
 @media (max-width: 900px) {
   .header { grid-template-columns: 1fr; gap: 30px; padding: 40px 20px; }
   .course-title { font-size: 1.6rem; }
@@ -237,11 +264,12 @@ body {
   .master-text-left { text-align: left; }
   .master-photo { max-width: 300px; margin: 0 auto; }
   .students { padding: 40px 20px; }
-  .students-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .students-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 }
 
 @media (max-width: 600px) {
-  .students-grid { grid-template-columns: repeat(2, 1fr); }
+  .students-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .course-title { font-size: 1.3rem; }
   .qr-img { width: 90px; height: 90px; }
+  .modal-close { font-size: 2rem; top: 15px; right: 20px; }
 }
