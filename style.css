@@ -101,10 +101,12 @@ body {
   justify-content: center;
 }
 
+/* ГРУППОВОЕ ФОТО — 3:2 (под 6000×4000) */
 .group-photo {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 3/2;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--border);
   display: block;
 }
@@ -139,10 +141,12 @@ body {
   margin-bottom: 12px;
 }
 
+/* ФОТО МАСТЕРА — вертикальное (3:4) */
 .master-photo {
   aspect-ratio: 3/4;
   width: 100%;
   object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--border);
   display: block;
 }
@@ -175,11 +179,12 @@ body {
   flex-direction: column;
 }
 
+/* ФОТО СТУДЕНТА — 2:3 (под 533×800) */
 .student-photo {
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   background-color: #1a1a1a;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   border: 1px solid var(--border);
   transition: 0.3s;
   width: 100%;
