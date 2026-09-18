@@ -5,55 +5,252 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Студент 1 — Ефремовцы’29</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.profile {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #FFB800;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.back-link:hover {
+  color: #FF8C00;
+  border-bottom-color: #FF8C00;
+}
+
+.photos-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.profile-photo {
+  aspect-ratio: 3/4;
+  background: #1a1a1a;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.profile-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  color: #FFB800;
+}
+
+.profile-name span {
+  color: #FFB800;
+}
+
+.profile-age {
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* БЛОК ССЫЛОК */
+.links-block {
+  margin-bottom: 40px;
+}
+
+.link-group {
+  margin-bottom: 25px;
+}
+
+.link-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #FFB800;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.link-url {
+  display: block;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  word-break: break-all;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.link-url:hover {
+  color: #FFB800;
+  border-bottom-color: #FFB800;
+}
+
+.link-simple {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.link-simple .label {
+  color: #FFB800;
+  letter-spacing: 0.05em;
+}
+
+.link-simple a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.link-simple a:hover {
+  color: #FFB800;
+  border-bottom-color: #FFB800;
+}
+
+/* ДОП ИНФО */
+.extra-info {
+  border-top: 1px solid #222;
+  padding-top: 25px;
+}
+
+.extra-info h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #FFB800;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.extra-info p {
+  color: #f5f5f5;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* QR */
+.profile-qr {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #222;
+}
+
+.profile-qr img {
+  width: 120px;
+  height: 120px;
+  background: #1a1a1a;
+  border: 1px solid #222;
+}
+
+.profile-qr p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFB800;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .photos-row { grid-template-columns: repeat(2, 1fr); }
+  .profile-info { grid-template-columns: 1fr; gap: 30px; }
+  .profile-name { font-size: 2.2rem; }
+  .profile { padding: 40px 20px; }
+}
+</style>
 </head>
 <body>
 
-<!-- ШАПКА СТРАНИЦЫ СТУДЕНТА -->
-<header class="student-header">
+<main class="profile">
+
   <a href="index.html" class="back-link">← Назад к курсу</a>
-</header>
 
-<!-- ФОТО СТУДЕНТА -->
-<section class="student-photos">
-  <div class="photo-main">
-    <span>ФОТО 1</span>
-  </div>
-  <div class="photo-row">
-    <div class="photo-small"><span>ФОТО 2</span></div>
-    <div class="photo-small"><span>ФОТО 3</span></div>
-    <div class="photo-small"><span>ФОТО 4</span></div>
-  </div>
-</section>
-
-<!-- ИНФОРМАЦИЯ О СТУДЕНТЕ -->
-<section class="student-info">
-  <h1 class="student-fullname">Студент 1</h1>
-  <p class="student-age">Возраст: —</p>
-
-  <div class="student-links">
-    <a href="#" class="link-btn" target="_blank">FilmTools</a>
-    <a href="#" class="link-btn" target="_blank">Портфолио (Яндекс.Диск)</a>
-    <a href="#" class="link-btn" target="_blank">Telegram</a>
-    <a href="#" class="link-btn" target="_blank">Instagram</a>
+  <!-- 4 ФОТО В РЯД -->
+  <div class="photos-row">
+    <div class="profile-photo">01</div>
+    <div class="profile-photo">01</div>
+    <div class="profile-photo">01</div>
+    <div class="profile-photo">01</div>
   </div>
 
-  <div class="student-extra">
-    <h3>Дополнительная информация</h3>
-    <p>Информация будет добавлена позже.</p>
-  </div>
-</section>
+  <!-- ИНФОРМАЦИЯ -->
+  <div class="profile-info">
 
-<!-- QR-КОД -->
-<section class="student-qr">
-  <div class="qr-block-student">
-    <img src="images/qr-student-01.png" alt="QR-код страницы студента" class="qr-img-student">
-    <p class="qr-caption">QR-код этой страницы</p>
-  </div>
-</section>
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div>
+      <h1 class="profile-name">Студент <span>1</span></h1>
+      <p class="profile-age">Возраст: —</p>
 
-<!-- ПОДВАЛ -->
+      <div class="links-block">
+
+        <div class="link-group">
+          <div class="link-label">Профессиональные ресурсы</div>
+          <a href="#" class="link-url">https://filmtools.ru/student1</a>
+        </div>
+
+        <div class="link-group">
+          <div class="link-label">Портфолио</div>
+          <a href="#" class="link-url">https://disk.yandex.ru/d/student1</a>
+        </div>
+
+        <div class="link-group">
+          <div class="link-simple">
+            <span class="label">Telegram:</span>
+            <a href="#">@student1</a>
+          </div>
+          <div class="link-simple">
+            <span class="label">Instagram:</span>
+            <a href="#">@student1_actor</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="profile-qr">
+        <img src="images/qr-01.png" alt="QR-код студента">
+        <p>QR-код профиля</p>
+      </div>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <div>
+      <div class="extra-info">
+        <h3>Дополнительная информация</h3>
+        <p>Информация будет добавлена позже.</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
 <footer class="footer">
-  <p>Ефремовцы’29 · Институт кино ВШЭ</p>
+  <p>Ефремовцы’29 · Институт кино ВШЭ · г. Москва</p>
 </footer>
 
 </body>
