@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --bg-2: #141414;
+  --accent: #FFB800;
+  --accent-2: #FF8C00;
+  --text: #f5f5f5;
+  --text-dim: #888;
+  --border: #222;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ШАПКА */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  padding: 60px 40px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  align-items: center;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.course-subtitle {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.course-location,
+.course-years {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.qr-block {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qr-img {
+  width: 120px;
+  height: 120px;
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.qr-caption {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-photo {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* БЛОК МАСТЕРА */
+.master {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 80px 40px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.master-text h2,
+.master-text h3 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.master-text h3 {
+  font-size: 1.2rem;
+}
+
+.master-text p {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.master-photo {
+  aspect-ratio: 3/4;
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.master-text-left { text-align: right; }
+.master-text-right { text-align: left; }
+
+/* ГАЛЕРЕЯ */
+.students {
+  padding: 60px 40px;
+}
+
+.section-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-photo {
+  aspect-ratio: 3/4;
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.student-card:hover .student-photo {
+  background: #222;
+  border-color: var(--accent);
+}
+
+.student-name {
+  display: block;
+  padding: 15px 5px;
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.student-name:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ПОДВАЛ */
+.footer {
+  padding: 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* МОБИЛЬНЫЙ */
+@media (max-width: 900px) {
+  .header { grid-template-columns: 1fr; gap: 30px; padding: 40px 20px; }
+  .course-title { font-size: 1.6rem; }
+  .master { grid-template-columns: 1fr; padding: 40px 20px; gap: 25px; }
+  .master-text-left { text-align: left; }
+  .master-photo { max-width: 300px; margin: 0 auto; }
+  .students { padding: 40px 20px; }
+  .students-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+
+@media (max-width: 600px) {
+  .students-grid { grid-template-columns: repeat(2, 1fr); }
+  .course-title { font-size: 1.3rem; }
+  .qr-img { width: 90px; height: 90px; }
+}
