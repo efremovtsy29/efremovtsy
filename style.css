@@ -53,6 +53,7 @@ body {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   line-height: 1;
+  color: var(--accent);
 }
 
 .course-subtitle {
@@ -65,7 +66,7 @@ body {
 .course-location,
 .course-years {
   font-size: 0.85rem;
-  color: var(--text-dim);
+  color: var(--accent);
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -89,7 +90,7 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent);
 }
 
 .header-right {
@@ -112,7 +113,7 @@ body {
   text-transform: uppercase;
 }
 
-/* БЛОК МАСТЕРА */
+/* МАСТЕР */
 .master {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -136,7 +137,7 @@ body {
 }
 
 .master-text p {
-  color: #bbb;
+  color: var(--text);
   font-size: 0.9rem;
   line-height: 1.7;
   margin-bottom: 12px;
@@ -167,7 +168,7 @@ body {
   font-size: 0.8rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent);
   margin-bottom: 30px;
   font-weight: 400;
 }
@@ -205,7 +206,7 @@ body {
   display: block;
   padding: 15px 5px;
   font-size: 0.9rem;
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: 0.3s;
@@ -213,8 +214,8 @@ body {
 }
 
 .student-name:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
 }
 
 /* ПОДВАЛ */
@@ -225,7 +226,7 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--accent);
 }
 
 /* МОБИЛЬНЫЙ */
