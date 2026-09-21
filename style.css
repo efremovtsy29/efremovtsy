@@ -287,6 +287,11 @@ body {
   transform: scale(1.2);
 }
 
+/* ==================== СЛУЖЕБНЫЕ КЛАССЫ ==================== */
+.nowrap {
+  white-space: nowrap;
+}
+
 /* ==================== МОБИЛЬНЫЙ ==================== */
 @media (max-width: 900px) {
   .header { grid-template-columns: 1fr; gap: 30px; padding: 40px 20px; }
