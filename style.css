@@ -210,7 +210,7 @@ body {
 
 /* ==================== ПОДВАЛ ==================== */
 .footer {
-  padding: 50px 40px;
+  padding: 40px;
   border-top: 1px solid var(--border);
   text-align: center;
   font-size: 0.75rem;
@@ -221,30 +221,31 @@ body {
 
 /* ПОДВАЛ — СОЦСЕТИ */
 .footer-social {
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 18px;
 }
 
 .footer-icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
-  line-height: 0;
 }
 
 .footer-icon svg {
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   fill: #FFB800;
   transition: 0.3s;
 }
 
 .footer-icon:hover svg {
   fill: #FF8C00;
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 /* ==================== МОДАЛЬНОЕ ОКНО ==================== */
@@ -302,5 +303,4 @@ body {
   .course-title { font-size: 1.3rem; }
   .qr-img { width: 90px; height: 90px; }
   .modal-close { font-size: 2rem; top: 15px; right: 20px; }
-  .footer-icon svg { width: 48px; height: 48px; }
 }
