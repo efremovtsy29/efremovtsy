@@ -1,306 +1,208 @@
-/* ==================== БАЗА ==================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ефремовцы’29 — Институт кино ВШЭ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <h1 class="course-title">Актёрский курс</h1>
+    <p class="course-subtitle">Институт кино НИУ ВШЭ</p>
+    <p class="course-location">г. Москва</p>
+    <p class="course-years">2025–2029</p>
+    <div class="qr-block">
+      <img src="images/qr-main.png" alt="QR-код сайта" class="qr-img">
+      <p class="qr-caption">Наведите камеру</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <img src="images/group-photo.jpg" alt="Групповое фото курса" class="group-photo">
+  </div>
+</header>
+
+<section class="master">
+  <div class="master-text master-text-left">
+    <h2>Мастер курса</h2>
+    <p>Основатель и художественный руководитель программы «Актер»</p>
+    <p>Профессор НИУ ВШЭ</p>
+  </div>
+  <img src="images/master.jpg" alt="Светлана Ефремова-Рид" class="master-photo">
+  <div class="master-text master-text-right">
+    <h3>Светлана Ефремова-Рид</h3>
+    <p>• Единственная российская актриса в Профсоюзе театральных актеров Америки (SAG-AFTRA)</p>
+    <p>• Декан актерского факультета California State University</p>
+    <p>• Участница театральных постановок на Бродвее</p>
+  </div>
+</section>
+
+<section class="students">
+  <h2 class="section-title">Студенты курса</h2>
+  <div class="students-grid">
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/baradacheva-1.jpg');" onclick="openModal('images/baradacheva-1.jpg')"></div>
+      <a href="baradacheva.html" class="student-name">Варвара Барадачева</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/vinogradova-1.jpg');" onclick="openModal('images/vinogradova-1.jpg')"></div>
+      <a href="vinogradova.html" class="student-name">Кристина Виноградова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/volkolupov-1.jpg');" onclick="openModal('images/volkolupov-1.jpg')"></div>
+      <a href="volkolupov.html" class="student-name">Александр Волколупов</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/greshnev-1.jpg');" onclick="openModal('images/greshnev-1.jpg')"></div>
+      <a href="greshnev.html" class="student-name">Егор Грешнев</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/guseynov-1.jpg');" onclick="openModal('images/guseynov-1.jpg')"></div>
+      <a href="guseynov.html" class="student-name">Эшгин Гусейнов</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/ermolenko-1.jpg');" onclick="openModal('images/ermolenko-1.jpg')"></div>
+      <a href="ermolenko.html" class="student-name">Мариана Ермоленко</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/efimova-1.jpg');" onclick="openModal('images/efimova-1.jpg')"></div>
+      <a href="efimova.html" class="student-name">Арина Ефимова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/ilyash-1.jpg');" onclick="openModal('images/ilyash-1.jpg')"></div>
+      <a href="ilyash.html" class="student-name">Александра Ильяш</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kaydes-1.jpg');" onclick="openModal('images/kaydes-1.jpg')"></div>
+      <a href="kaydes.html" class="student-name">Инна Кайдэс</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/koloev-1.jpg');" onclick="openModal('images/koloev-1.jpg')"></div>
+      <a href="koloev.html" class="student-name">Артур Колоев</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kritskaya-1.jpg');" onclick="openModal('images/kritskaya-1.jpg')"></div>
+      <a href="kritskaya.html" class="student-name">Дарья Крицкая</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kulakov-1.jpg');" onclick="openModal('images/kulakov-1.jpg')"></div>
+      <a href="kulakov.html" class="student-name">Иван Кулаков</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kupriyanova-1.jpg');" onclick="openModal('images/kupriyanova-1.jpg')"></div>
+      <a href="kupriyanova.html" class="student-name">Маргарита Куприянова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kurbatskiy-1.jpg');" onclick="openModal('images/kurbatskiy-1.jpg')"></div>
+      <a href="kurbatskiy.html" class="student-name">Андрей Курбатский</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/kyrnats-1.jpg');" onclick="openModal('images/kyrnats-1.jpg')"></div>
+      <a href="kyrnats.html" class="student-name">Владлена Кырнац</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/lukin-1.jpg');" onclick="openModal('images/lukin-1.jpg')"></div>
+      <a href="lukin.html" class="student-name">Иван Лукин</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/melkonyan-1.jpg');" onclick="openModal('images/melkonyan-1.jpg')"></div>
+      <a href="melkonyan.html" class="student-name">Василиса Мелконян</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/pavlun-1.jpg');" onclick="openModal('images/pavlun-1.jpg')"></div>
+      <a href="pavlun.html" class="student-name">Варвара Павлун</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/parfenova-1.jpg');" onclick="openModal('images/parfenova-1.jpg')"></div>
+      <a href="parfenova.html" class="student-name">Юнона Парфёнова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/sadkova-1.jpg');" onclick="openModal('images/sadkova-1.jpg')"></div>
+      <a href="sadkova.html" class="student-name">Маргарита Садкова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/sidyakina-1.jpg');" onclick="openModal('images/sidyakina-1.jpg')"></div>
+      <a href="sidyakina.html" class="student-name">Анна Сидякина</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/suchkova-1.jpg');" onclick="openModal('images/suchkova-1.jpg')"></div>
+      <a href="suchkova.html" class="student-name">София Сучкова</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/chelysheva-1.jpg');" onclick="openModal('images/chelysheva-1.jpg')"></div>
+      <a href="chelysheva.html" class="student-name">Виктория Челышева</a>
+    </div>
+
+    <div class="student-card">
+      <div class="student-photo" style="background-image: url('images/chechkina-1.jpg');" onclick="openModal('images/chechkina-1.jpg')"></div>
+      <a href="chechkina.html" class="student-name">Алина Чечкина</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Ефремовцы’29 · Институт кино ВШЭ · г. Москва</p>
+  <div class="footer-social">
+    <a href="https://t.me/fourfremovtsy" target="_blank" class="footer-icon" aria-label="Telegram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+      </svg>
+    </a>
+    <a href="https://instagram.com/fourfremovtsy" target="_blank" class="footer-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal" onclick="closeModal()">
+  <span class="modal-close" onclick="closeModal()">×</span>
+  <img id="modal-img" src="" alt="">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById('modal-img').src = src;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
-:root {
-  --bg: #0a0a0a;
-  --bg-2: #141414;
-  --accent: #FFB800;
-  --accent-2: #FF8C00;
-  --text: #f5f5f5;
-  --text-dim: #888;
-  --border: #222;
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
-body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
 
-/* ==================== ШАПКА ==================== */
-.header {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  padding: 60px 40px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  align-items: center;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-}
-
-.header-left {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.course-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  line-height: 1;
-  color: var(--accent);
-}
-
-.course-subtitle {
-  font-size: 1.1rem;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.course-location,
-.course-years {
-  font-size: 0.85rem;
-  color: var(--accent);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.qr-block {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.qr-img {
-  width: 120px;
-  height: 120px;
-  background-color: #1a1a1a;
-  border: 1px solid var(--border);
-  object-fit: contain;
-  display: block;
-}
-
-.qr-caption {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.header-right {
-  width: 100%;
-}
-
-.group-photo {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  object-position: center;
-  border: 1px solid var(--border);
-  display: block;
-}
-
-/* ==================== МАСТЕР ==================== */
-.master {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 80px 40px;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-}
-
-.master-text h2,
-.master-text h3 {
-  font-size: 1.4rem;
-  color: var(--accent);
-  margin-bottom: 15px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.master-text h3 {
-  font-size: 1.2rem;
-}
-
-.master-text p {
-  color: var(--text);
-  font-size: 0.9rem;
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-
-.master-photo {
-  width: 100%;
-  max-height: 500px;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid var(--border);
-  display: block;
-  background-color: #1a1a1a;
-}
-
-.master-text-left { text-align: right; }
-.master-text-right { text-align: left; }
-
-/* ==================== ГАЛЕРЕЯ ==================== */
-.students {
-  padding: 60px 40px;
-}
-
-.section-title {
-  font-size: 0.8rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 30px;
-  font-weight: 400;
-}
-
-.students-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.student-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.student-photo {
-  aspect-ratio: 2/3;
-  background-color: #1a1a1a;
-  background-size: cover;
-  background-position: center top;
-  border: 1px solid var(--border);
-  transition: 0.3s;
-  width: 100%;
-  cursor: pointer;
-}
-
-.student-card:hover .student-photo {
-  border-color: var(--accent);
-}
-
-.student-name {
-  display: block;
-  padding: 15px 5px;
-  font-size: 0.9rem;
-  color: var(--accent);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: 0.3s;
-  border-bottom: 1px solid transparent;
-}
-
-.student-name:hover {
-  color: var(--accent-2);
-  border-bottom-color: var(--accent-2);
-}
-
-/* ==================== ПОДВАЛ ==================== */
-.footer {
-  padding: 40px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-/* ПОДВАЛ — СОЦСЕТИ */
-.footer-social {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-}
-
-.footer-icon {
-  color: #FFB800;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-icon:hover {
-  color: #FF8C00;
-  transform: scale(1.2);
-}
-
-.footer-icon svg {
-  display: block;
-  width: 48px;
-  height: 48px;
-  fill: #FFB800;
-}
-
-/* ==================== МОДАЛЬНОЕ ОКНО ==================== */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.modal-overlay.active { display: flex; }
-
-.modal-overlay img {
-  max-width: 90%;
-  max-height: 90vh;
-  object-fit: contain;
-  border: 2px solid #FFB800;
-}
-
-.modal-close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #FFB800;
-  font-size: 3rem;
-  cursor: pointer;
-  font-weight: 300;
-  line-height: 1;
-  transition: 0.3s;
-}
-
-.modal-close:hover {
-  color: #FF8C00;
-  transform: scale(1.2);
-}
-
-/* ==================== МОБИЛЬНЫЙ ==================== */
-@media (max-width: 900px) {
-  .header { grid-template-columns: 1fr; gap: 30px; padding: 40px 20px; }
-  .course-title { font-size: 1.6rem; }
-  .master { grid-template-columns: 1fr; padding: 40px 20px; gap: 25px; }
-  .master-text-left { text-align: left; }
-  .master-photo { max-width: 300px; margin: 0 auto; }
-  .students { padding: 40px 20px; }
-  .students-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-}
-
-@media (max-width: 600px) {
-  .students-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .course-title { font-size: 1.3rem; }
-  .qr-img { width: 90px; height: 90px; }
-  .modal-close { font-size: 2rem; top: 15px; right: 20px; }
-  .footer-icon svg { width: 40px; height: 40px; }
-}
+</body>
+</html>
